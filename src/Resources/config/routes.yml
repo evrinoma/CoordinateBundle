@@ -1,0 +1,3 @@
+coordinateapi:
+  resource: "@EvrinomaCoordinateBundle/Resources/config/routing/api.yml"
+  prefix: evrinoma

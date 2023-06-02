@@ -1,0 +1,6 @@
+jms_serializer:
+  metadata:
+    directories:
+      CoordinateBundle:
+        namespace_prefix: "Evrinoma\\CoordinateBundle"
+        path: '%kernel.root_dir%/Resources/config/serializer/CoordinateBundle'

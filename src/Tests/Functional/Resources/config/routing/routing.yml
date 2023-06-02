@@ -1,0 +1,2 @@
+coordinate:
+    resource: "@EvrinomaCoordinateBundle/Resources/config/routes.yml"

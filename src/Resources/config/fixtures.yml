@@ -1,0 +1,5 @@
+services:
+  evrinoma.coordinate.fixtures.coordinate:
+    class: Evrinoma\CoordinateBundle\Fixtures\CoordinateFixtures
+    tags:
+      - { name: doctrine.fixture.orm }

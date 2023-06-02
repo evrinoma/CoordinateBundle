@@ -1,0 +1,9 @@
+services:
+  evrinoma.coordinate.constraint.property.altitude:
+    class: Evrinoma\CoordinateBundle\Constraint\Property\Altitude
+
+  evrinoma.coordinate.constraint.property.latitude:
+    class: Evrinoma\CoordinateBundle\Constraint\Property\Latitude
+
+  evrinoma.coordinate.constraint.property.longitude:
+    class: Evrinoma\CoordinateBundle\Constraint\Property\Longitude

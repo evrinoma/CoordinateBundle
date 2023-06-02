@@ -1,0 +1,38 @@
+Evrinoma\CoordinateBundle\Model\Coordinate\AbstractCoordinate:
+  exclusion_policy: ALL
+  properties:
+    id:
+      groups: [
+          API_GET_COORDINATE, API_POST_COORDINATE, API_PUT_COORDINATE,
+      ]
+      expose: true
+    createdAt:
+      type: DateTimeImmutable<'Y-m-d H:i'>
+      groups:  [
+          API_GET_COORDINATE, API_POST_COORDINATE, API_PUT_COORDINATE,
+      ]
+      expose: true
+    updatedAt:
+      type: DateTimeImmutable<'Y-m-d H:i'>
+      groups:  [
+          API_GET_COORDINATE, API_POST_COORDINATE, API_PUT_COORDINATE,
+      ]
+      expose: true
+    latitude:
+      type: double
+      groups:  [
+          API_GET_COORDINATE, API_POST_COORDINATE, API_PUT_COORDINATE,
+      ]
+      expose: true
+    longitude:
+      type: double
+      groups:  [
+          API_GET_COORDINATE, API_POST_COORDINATE, API_PUT_COORDINATE,
+      ]
+      expose: true
+    altitude:
+      type: double
+      groups:  [
+          API_GET_COORDINATE, API_POST_COORDINATE, API_PUT_COORDINATE,
+      ]
+      expose: true

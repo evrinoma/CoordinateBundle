@@ -1,0 +1,5 @@
+services:
+  evrinoma.coordinate.object_manager:
+    class:  Doctrine\Persistence\ObjectManager
+    public: false
+    arguments: ['%evrinoma.coordinate.model_manager_name%']

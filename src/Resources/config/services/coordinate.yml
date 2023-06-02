@@ -1,0 +1,91 @@
+services:
+  Evrinoma\CoordinateBundle\Controller\CoordinateApiController:
+    alias: evrinoma.coordinate.api.controller
+    public: true
+
+  evrinoma.coordinate.api.controller:
+    class: Evrinoma\CoordinateBundle\Controller\CoordinateApiController
+    arguments:
+      - '@jms_serializer'
+      - '@request_stack'
+      - '@evrinoma.dto.factory'
+      - '@evrinoma.coordinate.facade'
+    autowire: true
+
+  evrinoma.coordinate.facade:
+    class: Evrinoma\CoordinateBundle\Facade\Coordinate\Facade
+    arguments:
+      - '@evrinoma.coordinate.command.manager'
+      - '@evrinoma.coordinate.query.manager'
+      - '@evrinoma.coordinate.adaptor'
+    autowire: true
+
+  Evrinoma\CoordinateBundle\Facade\Coordinate\FacadeInterface:
+    alias: evrinoma.coordinate.facade
+
+  evrinoma.coordinate.factory:
+    class: Evrinoma\CoordinateBundle\Factory\Coordinate\Factory
+    public: true
+    arguments:
+
+  evrinoma.coordinate.orm.repository:
+    class: Evrinoma\CoordinateBundle\Repository\Orm\Coordinate\CoordinateRepository
+    public: true
+    arguments:
+
+  evrinoma.coordinate.command.manager:
+    class: Evrinoma\CoordinateBundle\Manager\CommandManager
+    arguments:
+      - '@evrinoma.coordinate.validator'
+      - '@evrinoma.coordinate.repository'
+      - '@evrinoma.coordinate.factory'
+      - '@evrinoma.coordinate.command.mediator'
+
+  Evrinoma\CoordinateBundle\Manager\CommandManagerInterface:
+    alias: evrinoma.coordinate.command.manager
+
+  evrinoma.coordinate.query.manager:
+    class: Evrinoma\CoordinateBundle\Manager\QueryManager
+    arguments:
+      - '@evrinoma.coordinate.repository'
+
+  Evrinoma\CoordinateBundle\Manager\QueryManagerInterface:
+    alias: evrinoma.coordinate.query.manager
+    
+  evrinoma.coordinate.validator:
+    class: Evrinoma\CoordinateBundle\Validator\CoordinateValidator
+    public: true
+    arguments:
+
+  Evrinoma\CoordinateBundle\Validator\CoordinateValidator:
+    alias: evrinoma.coordinate.validator
+
+  evrinoma.coordinate.query.orm.mediator:
+    class: Evrinoma\CoordinateBundle\Mediator\Orm\QueryMediator
+    public: true
+    arguments:
+
+  Evrinoma\CoordinateBundle\Mediator\Orm\QueryMediator:
+    alias: evrinoma.coordinate.query.orm.mediator
+
+  evrinoma.coordinate.command.mediator:
+    class: Evrinoma\CoordinateBundle\Mediator\CommandMediator
+    public: true
+    arguments:
+
+  Evrinoma\CoordinateBundle\Mediator\CommandMediator:
+    alias: evrinoma.coordinate.command.mediator
+
+  Evrinoma\CoordinateBundle\Mediator\CommandMediatorInterface:
+    alias: evrinoma.coordinate.command.mediator
+
+  evrinoma.coordinate.pre.validator:
+    class: Evrinoma\CoordinateBundle\PreValidator\DtoPreValidator
+    public: true
+    arguments:
+
+  Evrinoma\CoordinateBundle\PreValidator\DtoPreValidator:
+    alias: evrinoma.coordinate.pre.validator
+
+  Evrinoma\CoordinateBundle\PreValidator\DtoPreValidatorInterface:
+    alias: evrinoma.coordinate.pre.validator

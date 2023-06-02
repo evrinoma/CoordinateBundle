@@ -1,0 +1,9 @@
+services:
+  evrinoma.coordinate.test.functional.action.coordinate:
+    class: Evrinoma\CoordinateBundle\Tests\Functional\Action\BaseCoordinate
+    public: true
+    arguments:
+
+  Evrinoma\CoordinateBundle\Tests\Functional\Action\BaseCoordinate:
+    alias: evrinoma.coordinate.test.functional.action.coordinate
+    public: true
