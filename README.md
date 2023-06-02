@@ -27,10 +27,10 @@
         constraints: Вкл/выкл проверки полей сущности по умолчанию 
         dto: App\Coordinate\Dto\CoordinateDto класс dto с которым работает сущность
         decorates:
-          command - декоратор mediator команд ссылок 
-          query - декоратор mediator запросов ссылок
+          command - декоратор mediator команд координаты 
+          query - декоратор mediator запросов координаты
         services:
-          pre_validator - переопределение сервиса валидатора ссылок
+          pre_validator - переопределение сервиса валидатора координаты
           handler - переопределение сервиса обработчика сущностей
 
 # CQRS model
@@ -53,25 +53,25 @@ Actions в контроллере разбиты на две группы
 
 группы  сериализации
 
-    1. API_GET_COORDINATE, API_CRITERIA_COORDINATE - получение ссылки
-    2. API_POST_COORDINATE - создание ссылки
-    3. API_PUT_COORDINATE -  редактирование ссылки
+    1. API_GET_COORDINATE, API_CRITERIA_COORDINATE - получение координаты
+    2. API_POST_COORDINATE - создание координаты
+    3. API_PUT_COORDINATE -  редактирование координаты
 
 # Статусы:
 
     создание:
-        ссылка создана HTTP_CREATED 201
+        координата создана HTTP_CREATED 201
     обновление:
-        ссылка обновление HTTP_OK 200
+        координата обновление HTTP_OK 200
     удаление:
-        ссылка удален HTTP_ACCEPTED 202
+        координата удален HTTP_ACCEPTED 202
     получение:
-        ссылка(и) найдены HTTP_OK 200
+        координата(и) найдены HTTP_OK 200
     ошибки:
-        если ссылка не найдена CoordinateNotFoundException возвращает HTTP_NOT_FOUND 404
-        если ссылка не уникальна UniqueConstraintViolationException возвращает HTTP_CONFLICT 409
-        если ссылка не прошла валидацию CoordinateInvalidException возвращает HTTP_UNPROCESSABLE_ENTITY 422
-        если ссылка не может быть сохранена CoordinateCannotBeSavedException возвращает HTTP_NOT_IMPLEMENTED 501
+        если координата не найдена CoordinateNotFoundException возвращает HTTP_NOT_FOUND 404
+        если координата не уникальна UniqueConstraintViolationException возвращает HTTP_CONFLICT 409
+        если координата не прошла валидацию CoordinateInvalidException возвращает HTTP_UNPROCESSABLE_ENTITY 422
+        если координата не может быть сохранена CoordinateCannotBeSavedException возвращает HTTP_NOT_IMPLEMENTED 501
         все остальные ошибки возвращаются как HTTP_BAD_REQUEST 400
 
 # Constraint
