@@ -17,9 +17,9 @@ use Evrinoma\CoordinateBundle\Model\Coordinate\CoordinateInterface as BaseCoordi
 
 trait CommonCoordinateTrait
 {
-    protected BaseCoordinateInterface $coordinate;
+    protected ?BaseCoordinateInterface $coordinate = null;
 
-    public function getCoordinate(): BaseCoordinateInterface
+    public function getCoordinate(): ?BaseCoordinateInterface
     {
         return $this->coordinate;
     }

@@ -17,7 +17,7 @@ use Evrinoma\CoordinateBundle\Model\Coordinate\CoordinateInterface as BaseCoordi
 
 interface CommonCoordinateInterface
 {
-    public function getCoordinate(): BaseCoordinateInterface;
+    public function getCoordinate(): ?BaseCoordinateInterface;
 
     public function setCoordinate(BaseCoordinateInterface $coordinate): self;
 
