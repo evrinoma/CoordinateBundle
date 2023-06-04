@@ -27,11 +27,11 @@ trait CoordinateApiDtoTrait
     public function genRequestCoordinateApiDto(?Request $request): ?\Generator
     {
         if ($request) {
-            $phone = $request->get(CoordinateApiDtoInterface::COORDINATE);
-            if ($phone) {
+            $coordinate = $request->get(CoordinateApiDtoInterface::COORDINATE);
+            if ($coordinate) {
                 $newRequest = $this->getCloneRequest();
-                $phone[DtoInterface::DTO_CLASS] = static::$classCoordinateApiDto;
-                $newRequest->request->add($phone);
+                $coordinate[DtoInterface::DTO_CLASS] = static::$classCoordinateApiDto;
+                $newRequest->request->add($coordinate);
 
                 yield $newRequest;
             }
@@ -40,11 +40,11 @@ trait CoordinateApiDtoTrait
 
     public function hasCoordinateApiDto(): bool
     {
-        return null !== $this->phoneApiDto;
+        return null !== $this->coordinateApiDto;
     }
 
     public function getCoordinateApiDto(): BaseCoordinateApiDtoInterface
     {
-        return $this->phoneApiDto;
+        return $this->coordinateApiDto;
     }
 }

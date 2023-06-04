@@ -18,5 +18,5 @@ use Evrinoma\DtoBundle\Dto\DtoInterface;
 
 interface CoordinatesApiDtoInterface
 {
-    public function addCoordinatesApiDto(CoordinateApiDtoInterface $phoneApiDto): DtoInterface;
+    public function addCoordinatesApiDto(CoordinateApiDtoInterface $coordinateApiDto): DtoInterface;
 }

@@ -18,8 +18,8 @@ use Evrinoma\DtoBundle\Dto\DtoInterface;
 
 trait CoordinateApiDtoTrait
 {
-    public function setCoordinateApiDto(CoordinateApiDtoInterface $phoneApiDto): DtoInterface
+    public function setCoordinateApiDto(CoordinateApiDtoInterface $coordinateApiDto): DtoInterface
     {
-        return parent::setCoordinateApiDto($phoneApiDto);
+        return parent::setCoordinateApiDto($coordinateApiDto);
     }
 }

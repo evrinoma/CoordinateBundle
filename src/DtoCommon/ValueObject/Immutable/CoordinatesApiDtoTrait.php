@@ -19,18 +19,18 @@ use Symfony\Component\HttpFoundation\Request;
 
 trait CoordinatesApiDtoTrait
 {
-    protected array $phonesApiDto = [];
+    protected array $coordinatesApiDto = [];
 
     protected static string $classCoordinatesApiDto = CoordinateApiDto::class;
 
     public function hasCoordinatesApiDto(): bool
     {
-        return 0 !== \count($this->phonesApiDto);
+        return 0 !== \count($this->coordinatesApiDto);
     }
 
     public function getCoordinatesApiDto(): array
     {
-        return $this->phonesApiDto;
+        return $this->coordinatesApiDto;
     }
 
     public function genRequestCoordinatesApiDto(?Request $request): ?\Generator

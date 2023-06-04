@@ -21,9 +21,9 @@ trait CoordinateApiDtoTrait
 {
     use CoordinateApiDtoImmutableTrait;
 
-    public function setCoordinateApiDto(CoordinateApiDtoInterface $phoneApiDto): DtoInterface
+    public function setCoordinateApiDto(CoordinateApiDtoInterface $coordinateApiDto): DtoInterface
     {
-        $this->phoneApiDto = $phoneApiDto;
+        $this->coordinateApiDto = $coordinateApiDto;
 
         return $this;
     }
