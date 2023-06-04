@@ -20,7 +20,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 trait CoordinateApiDtoTrait
 {
-    protected ?BaseCoordinateApiDtoInterface $phoneApiDto = null;
+    protected ?BaseCoordinateApiDtoInterface $coordinateApiDto = null;
 
     protected static string $classCoordinateApiDto = CoordinateApiDto::class;
 
