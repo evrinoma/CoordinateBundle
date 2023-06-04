@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the package ITE product.
+ * This file is part of the package.
  *
- * Developer list:
  * (c) Nikolay Nikolaev <evrinoma@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -14,9 +13,9 @@ declare(strict_types=1);
 
 namespace Evrinoma\CoordinateBundle\Mediator\Common;
 
-use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\CoordinateBundle\DtoCommon\ValueObject\Immutable\CoordinateApiDtoInterface;
 use Evrinoma\CoordinateBundle\Repository\AliasInterface as CoordinateAliasInterface;
+use Evrinoma\DtoBundle\Dto\DtoInterface;
 use Evrinoma\UtilsBundle\QueryBuilder\QueryBuilderInterface;
 
 trait CommonCoordinateMediatorTrait

@@ -16,5 +16,5 @@ namespace Evrinoma\CoordinateBundle\Repository;
 interface AliasInterface
 {
     public const COORDINATE = 'coordinate';
-    public const COORDINATES =  AliasInterface::COORDINATE . 's';
+    public const COORDINATES = AliasInterface::COORDINATE.'s';
 }

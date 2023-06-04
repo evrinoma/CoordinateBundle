@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the package ITE product.
+ * This file is part of the package.
  *
- * Developer list:
  * (c) Nikolay Nikolaev <evrinoma@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -14,7 +13,6 @@ declare(strict_types=1);
 
 namespace Evrinoma\CoordinateBundle\Entity\Common;
 
-
 use Evrinoma\CoordinateBundle\Model\Coordinate\CoordinateInterface as BaseCoordinateInterface;
 
 interface CommonCoordinateInterface
@@ -22,4 +20,6 @@ interface CommonCoordinateInterface
     public function getCoordinate(): BaseCoordinateInterface;
 
     public function setCoordinate(BaseCoordinateInterface $coordinate): self;
+
+    public function resetCoordinate(): self;
 }

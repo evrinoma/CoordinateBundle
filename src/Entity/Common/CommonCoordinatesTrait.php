@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the package ITE product.
+ * This file is part of the package.
  *
- * Developer list:
  * (c) Nikolay Nikolaev <evrinoma@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -42,6 +41,13 @@ trait CommonCoordinatesTrait
     public function removeCoordinate(BaseCoordinateInterface $coordinate): self
     {
         $this->coordinates->removeElement($coordinate);
+
+        return $this;
+    }
+
+    public function clearCoordinate(): self
+    {
+        $this->coordinates->clear();
 
         return $this;
     }
