@@ -21,7 +21,7 @@ trait CommonCoordinatesTrait
 {
     protected Collection $coordinates;
 
-    public function __construct()
+    public function initCoordinates()
     {
         $this->coordinates = new ArrayCollection();
     }
